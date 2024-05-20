@@ -1,42 +1,42 @@
 [alias]
-  br = branch
-  cm = commit -m
-  co = checkout
-  df = diff --color --color-words --abbrev
-  lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --
-  st = status -s
+	br = branch
+	cm = commit -m
+	co = checkout
+	df = diff --color --color-words --abbrev
+	lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --
+	st = status -s
 [core]
-  editor = $EDITOR -w
-  pager = delta
+	editor = $EDITOR -w
+	pager = delta
 [interactive]
-  diffFilter = delta --color-only
+	diffFilter = delta --color-only
 [include]
-  path = ~/.config/delta/themes/catppuccin.gitconfig
+	path = ~/.config/delta/themes/catppuccin.gitconfig
 [delta]
-  features = catppuccin-frappe
-  navigate = true
-  side-by-side = true
+	features = catppuccin-frappe
+	navigate = true
+	side-by-side = true
 [color]
-  ui = auto
+	ui = auto
 [color "branch"]
-  current = yellow
-  local = cyan bold
-  remote = green bold
+	current = yellow
+	local = cyan bold
+	remote = green bold
 [color "diff"]
-  frag = magenta bold
-  meta = yellow bold
-  new = green bold
-  old = red bold
+	frag = magenta bold
+	meta = yellow bold
+	new = green bold
+	old = red bold
 [color "status"]
-  added = yellow bold
-  changed = green bold
-  untracked = cyan bold
+	added = yellow bold
+	changed = green bold
+	untracked = cyan bold
 [pull]
-  rebase = true
+	rebase = true
 [merge]
-  conflictstyle = diff3
+	conflictstyle = diff3
 [diff]
-  colorMoved = default
+	colorMoved = default
 [user]
-  name = El Marques
-  email = el@dachs.tech
+	name = El Marques
+	email = el@dachs.tech
