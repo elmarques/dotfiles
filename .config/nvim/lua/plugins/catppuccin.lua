@@ -9,6 +9,10 @@ return {
 		catppuccin.setup({
 			flavour = "frappe",
 			transparent_background = true,
+			integrations = {
+				mason = true,
+				which_key = true,
+			},
 		})
 
 		vim.cmd.colorscheme("catppuccin")
