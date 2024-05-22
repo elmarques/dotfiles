@@ -2,11 +2,11 @@
 
 # functions
 run_script() {
-  [ -s $1 ] && . $1
+  [ -s "$1" ] && . "$1"
 }
 
 # instant prompt
-run_script "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
+run_script "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-$USER.zsh"
 
 # dev
 export EDITOR="nvim"
@@ -34,3 +34,7 @@ eval "$(zoxide init zsh)"
 
 # eza
 alias l="eza --color=always --icons=always --all --long --git --no-permissions --no-filesize --no-user --no-time"
+
+# fzf
+eval "$(fzf --zsh)"
+run_script "$HOME/.fzf.zsh"
