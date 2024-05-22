@@ -29,6 +29,10 @@ run_script "$HOME/.oh-my-zsh/oh-my-zsh.sh"
 run_script "$HOME/.p10k.zsh"
 run_script "$(brew --prefix)/share/powerlevel10k/powerlevel10k.zsh-theme"
 
+# zsh plugins
+run_script "$(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh"
+run_script "$(brew --prefix)/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh"
+
 # zoxide
 eval "$(zoxide init zsh)"
 
