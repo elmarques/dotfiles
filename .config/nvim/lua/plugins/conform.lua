@@ -16,11 +16,18 @@ return {
 				yaml = { "prettier" },
 				markdown = { "prettier" },
 				lua = { "stylua" },
+				sh = { "shfmt" },
+				zsh = { "shfmt" },
 			},
 			format_on_save = {
 				lsp_fallback = true,
 				async = false,
 				timeout_ms = 1000,
+			},
+			formatters = {
+				shfmt = {
+					prepend_args = { "-i", "2" },
+				},
 			},
 		})
 

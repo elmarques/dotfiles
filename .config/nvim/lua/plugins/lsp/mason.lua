@@ -34,6 +34,7 @@ return {
 				"prettier",
 				"stylua",
 				"eslint_d",
+				"shfmt",
 			},
 		})
 	end,
