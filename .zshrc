@@ -33,7 +33,7 @@ run_script "$(brew --prefix)/share/powerlevel10k/powerlevel10k.zsh-theme"
 eval "$(zoxide init zsh)"
 
 # eza
-alias l="eza --color=always --icons=always --all --long --git --no-permissions --no-filesize --no-user --no-time"
+alias l="eza --color=always --icons=always --all --long --no-permissions --no-filesize --no-user --no-time"
 
 # fzf
 eval "$(fzf --zsh)"
