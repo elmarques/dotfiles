@@ -1,7 +1,8 @@
 local opt = vim.opt
 
--- explore
-vim.g.newtrw_liststyle = 3
+-- netrw
+vim.g.loaded_netrw = 1
+vim.g.loaded_netrwPlugin = 1
 
 -- line numbers
 opt.relativenumber = true

@@ -5,36 +5,21 @@ return {
 		local tree = require("nvim-tree")
 		local keymap = vim.keymap
 
-		vim.g.loaded_netrw = 1
-		vim.g.loaded_netrwPlugin = 1
-
 		tree.setup({
+			disable_netrw = true,
+			hijack_cursor = true,
+			sync_root_with_cwd = true,
+			update_focused_file = {
+				enable = true,
+				update_root = false,
+			},
 			view = {
-				width = 42,
-				relativenumber = true,
+				width = 40,
+				preserve_window_proportions = true,
 			},
 			renderer = {
-				icons = {
-					glyphs = {
-						folder = {
-							arrow_closed = "",
-							arrow_open = "",
-						},
-					},
-				},
-			},
-			actions = {
-				open_file = {
-					window_picker = {
-						enable = false,
-					},
-				},
-			},
-			filters = {
-				custom = { ".DS_Store" },
-			},
-			git = {
-				ignore = false,
+				root_folder_label = false,
+				highlight_git = true,
 			},
 		})
 
