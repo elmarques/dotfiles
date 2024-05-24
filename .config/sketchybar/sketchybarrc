@@ -2,37 +2,52 @@
 
 PLUGIN_DIR="$CONFIG_DIR/plugins"
 
+# theme
+COLOR_BG=0x782f3448
+COLOR_ICON=0xcc8caaee
+COLOR_LABEL=0xffffffff
+COLOR_OVERLAY=0x40c6d0f5
+
+FONT_LARGE="JetBrainsMono Nerd Font:Bold:16.0"
+FONT_MEDIUM="JetBrainsMono Nerd Font:Regular:14.0"
+FONT_SMALL="JetBrainsMono Nerd Font:Regular:12.0"
+FONT_ICON="sketchybar-app-font:Regular:16.0"
+
+SIZE_MEDIUM=8
+SIZE_SMALL=4
+
 # bar
-sketchybar --bar position=top height=40 blur_radius=32 color=0x782F3448
+sketchybar --bar position=top height=40 blur_radius=32 color="$COLOR_BG"
 
 # default values
 default=(
-  padding_left=4
-  padding_right=4
-  icon.font="JetBrainsMono Nerd Font:Bold:17.0"
-  label.font="JetBrainsMono Nerd Font:Bold:14.0"
-  icon.color=0xffffffff
-  label.color=0xffffffff
-  icon.padding_left=4
-  icon.padding_right=4
-  label.padding_left=4
-  label.padding_right=4
+  padding_left="$SIZE_SMALL"
+  padding_right="$SIZE_SMALL"
+  icon.padding_left="$SIZE_SMALL"
+  icon.padding_right="$SIZE_SMALL"
+  label.padding_left="$SIZE_SMALL"
+  label.padding_right="$SIZE_SMALL"
+  icon.color="$COLOR_ICON"
+  label.color="$COLOR_LABEL"
+  icon.font="$FONT_LARGE"
+  label.font="$FONT_MEDIUM"
 )
 sketchybar --default "${default[@]}"
 
 # spaces
-SPACE_ICONS=("1" "2" "3" "4")
+SPACE_ICONS=("" "" "󰖟" "" "󰭹" "")
 for i in "${!SPACE_ICONS[@]}"; do
   sid="$(($i + 1))"
   space=(
     space="$sid"
     icon="${SPACE_ICONS[i]}"
-    icon.padding_left=8
-    icon.padding_right=8
-    background.color=0x40ffffff
-    background.corner_radius=4
-    background.height=24
-    label.drawing=off
+    background.color="$COLOR_OVERLAY"
+    background.corner_radius="$SIZE_MEDIUM"
+    background.height=32
+    label="$sid"
+    label.font="$FONT_SMALL"
+    icon.padding_left="$SIZE_MEDIUM"
+    label.padding_right="$SIZE_MEDIUM"
     script="$PLUGIN_DIR/space.sh"
     click_script="yabai -m space --focus $sid"
   )
@@ -41,9 +56,8 @@ done
 
 # left items
 sketchybar --add item chevron left \
-  --set chevron icon= label.drawing=off \
   --add item front_app left \
-  --set front_app icon.drawing=off script="$PLUGIN_DIR/front_app.sh" \
+  --set front_app icon.font="$FONT_ICON" label.font="$FONT_LARGE" script="$PLUGIN_DIR/front_app.sh" \
   --subscribe front_app front_app_switched
 
 # right items
