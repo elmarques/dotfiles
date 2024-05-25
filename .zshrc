@@ -11,9 +11,6 @@ clear_history() {
   echo >&2 "History file deleted."
 }
 
-# instant prompt
-run_script "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-$USER.zsh"
-
 # dev
 export EDITOR="nvim"
 export VISUAL="nvim"
@@ -37,9 +34,8 @@ setopt hist_ignore_space
 setopt hist_verify
 setopt share_history
 
-# powerlevel10k
-run_script "$HOME/.p10k.zsh"
-run_script "$(brew --prefix)/share/powerlevel10k/powerlevel10k.zsh-theme"
+# starship
+eval "$(starship init zsh)"
 
 # zsh plugins
 run_script "$(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh"
