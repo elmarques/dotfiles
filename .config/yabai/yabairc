@@ -11,6 +11,11 @@ yabai -m config left_padding 8
 yabai -m config window_gap 8
 
 # exceptions
+yabai -m rule --add app="^Finder$" manage=off
 yabai -m rule --add app="^System Settings$" manage=off
 yabai -m rule --add app="^Calculator$" manage=off
+yabai -m rule --add app="^Raycast$" manage=off
+yabai -m rule --add app="^1Password$" manage=off
+yabai -m rule --add app="^eqMac$" manage=off
+yabai -m rule --add app="^Audio MIDI Setup$" manage=off
 

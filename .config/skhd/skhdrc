@@ -29,3 +29,6 @@ shift + alt - 4 : yabai -m window --space 4
 shift + alt - 5 : yabai -m window --space 5
 shift + alt - 6 : yabai -m window --space 6
 
+# yabai service
+ctrl + alt - r : yabai --restart-service
+
