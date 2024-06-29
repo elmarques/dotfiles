@@ -11,6 +11,7 @@ return {
 			transparent_background = true,
 			integrations = {
 				mason = true,
+				lsp_trouble = true,
 				which_key = true,
 			},
 		})
