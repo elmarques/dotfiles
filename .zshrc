@@ -50,3 +50,6 @@ alias l="eza --color=always --icons=always --all --long --no-permissions --no-fi
 # fzf
 eval "$(fzf --zsh)"
 run_script "$HOME/.fzf.zsh"
+
+# zellij
+alias zel='zellij --session=$(basename "$PWD") --layout=dev'
