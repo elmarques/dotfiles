@@ -26,6 +26,7 @@ return {
 				"cssls",
 				"tailwindcss",
 				"lua_ls",
+				"eslint",
 			},
 		})
 
@@ -33,7 +34,6 @@ return {
 			ensure_installed = {
 				"prettierd",
 				"stylua",
-				"eslint_d",
 				"shfmt",
 			},
 		})
