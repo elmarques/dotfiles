@@ -194,6 +194,6 @@ plugins {
 
 pane_frames false
 
-theme "catppuccin-frappe"
+theme "catppuccin-mocha"
 
 default_layout "compact"

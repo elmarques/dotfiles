@@ -13,7 +13,7 @@
 [include]
 	path = ~/.config/delta/themes/catppuccin.gitconfig
 [delta]
-	features = catppuccin-frappe
+	features = catppuccin-mocha
 	navigate = true
 	side-by-side = true
 [color]
