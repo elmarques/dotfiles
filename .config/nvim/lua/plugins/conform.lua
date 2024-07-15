@@ -18,6 +18,7 @@ return {
 				lua = { "stylua" },
 				sh = { "shfmt" },
 				zsh = { "shfmt" },
+				python = { "black" },
 			},
 			format_on_save = {
 				lsp_fallback = true,
@@ -30,5 +31,14 @@ return {
 				},
 			},
 		})
+
+		vim.api.nvim_create_user_command("KillPrettierd", function()
+			local handle = io.popen("pgrep -f prettierd | xargs kill -9")
+
+			if handle ~= nil then
+				handle:close()
+				print("Prettierd killed")
+			end
+		end, {})
 	end,
 }

@@ -27,6 +27,7 @@ return {
 				"tailwindcss",
 				"lua_ls",
 				"eslint",
+				"pyright",
 			},
 		})
 
@@ -35,6 +36,7 @@ return {
 				"prettierd",
 				"stylua",
 				"shfmt",
+				"black",
 			},
 		})
 	end,
