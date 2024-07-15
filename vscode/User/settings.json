@@ -1,0 +1,55 @@
+{
+  "workbench.startupEditor": "none",
+  "workbench.colorTheme": "Catppuccin Mocha",
+  "workbench.iconTheme": "catppuccin-mocha",
+  "workbench.fontAliasing": "antialiased",
+  "workbench.layoutControl.enabled": false,
+  "workbench.sideBar.location": "right",
+
+  "breadcrumbs.enabled": false,
+
+  "editor.minimap.enabled": false,
+  "editor.renderWhitespace": "none",
+  "editor.semanticHighlighting.enabled": true,
+  "editor.guides.indentation": false,
+  "editor.lineNumbers": "relative",
+  "editor.scrollbar.horizontal": "hidden",
+  "editor.scrollbar.vertical": "hidden",
+  "editor.snippetSuggestions": "top",
+  "editor.rulers": [80],
+
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "[python]": {
+    "editor.defaultFormatter": "ms-python.black-formatter"
+  },
+  "editor.formatOnSave": true,
+  "editor.inlineSuggest.enabled": true,
+
+  "editor.fontFamily": "JetBrainsMono Nerd Font",
+  "editor.fontSize": 15,
+  "editor.lineHeight": 1.8,
+  "editor.fontLigatures": true,
+
+  "terminal.integrated.fontFamily": "JetBrainsMono Nerd Font",
+  "terminal.integrated.fontSize": 14,
+  "terminal.integrated.minimumContrastRatio": 1,
+
+  "window.commandCenter": false,
+  "window.titleBarStyle": "native",
+
+  "catppuccin-icons.hidesExplorerArrows": false,
+
+  "apc.font.family": "JetBrainsMono Nerd Font",
+  "apc.electron": {
+    "titleBarStyle": "hiddenInset",
+    "trafficLightPosition": { "x": 9, "y": 9 }
+  },
+  "apc.header": { "height": 32 },
+  "apc.listRow": {
+    "height": 24
+  },
+
+  "extensions.experimental.affinity": {
+    "asvetliakov.vscode-neovim": 1
+  }
+}
