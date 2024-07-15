@@ -12,6 +12,12 @@ if not vim.loop.fs_stat(lazypath) then
 end
 
 vim.opt.rtp:prepend(lazypath)
+vim.api.nvim_set_keymap(
+	"n",
+	"<leader>lu",
+	":Lazy update<CR>",
+	{ noremap = true, silent = true, desc = "Update plugins" }
+)
 
 require("lazy").setup({
 	{ import = "plugins" },
