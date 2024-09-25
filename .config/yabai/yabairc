@@ -18,4 +18,4 @@ yabai -m rule --add app="^Raycast$" manage=off
 yabai -m rule --add app="^1Password$" manage=off
 yabai -m rule --add app="^eqMac$" manage=off
 yabai -m rule --add app="^Audio MIDI Setup$" manage=off
-
+yabai -m rule --add app="^Signal$" manage=off
