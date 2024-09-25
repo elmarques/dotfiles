@@ -4,21 +4,18 @@
   "workbench.iconTheme": "catppuccin-mocha",
   "workbench.fontAliasing": "antialiased",
   "workbench.layoutControl.enabled": false,
-  "workbench.sideBar.location": "right",
+  "workbench.sideBar.location": "left",
   "breadcrumbs.enabled": false,
   "editor.minimap.enabled": false,
   "editor.renderWhitespace": "none",
   "editor.semanticHighlighting.enabled": true,
   "editor.guides.indentation": false,
-  "editor.lineNumbers": "relative",
+  "editor.lineNumbers": "on",
   "editor.scrollbar.horizontal": "hidden",
   "editor.scrollbar.vertical": "hidden",
   "editor.snippetSuggestions": "top",
   "editor.rulers": [80],
   "editor.defaultFormatter": "esbenp.prettier-vscode",
-  "[python]": {
-    "editor.defaultFormatter": "ms-python.black-formatter"
-  },
   "editor.formatOnSave": true,
   "editor.inlineSuggest.enabled": true,
   "editor.fontFamily": "JetBrainsMono Nerd Font",
@@ -37,8 +34,5 @@
     "trafficLightPosition": { "x": 9, "y": 9 }
   },
   "apc.header": { "height": 32 },
-  "apc.listRow": { "height": 24 },
-  "extensions.experimental.affinity": {
-    "asvetliakov.vscode-neovim": 1
-  }
+  "apc.listRow": { "height": 24 }
 }
