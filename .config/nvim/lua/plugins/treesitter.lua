@@ -20,6 +20,7 @@ return {
 				"lua",
 				"vim",
 				"vimdoc",
+				"astro",
 			},
 			incremental_selection = {
 				enable = true,

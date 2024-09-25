@@ -3,7 +3,19 @@ return {
 	dependencies = { "nvim-tree/nvim-web-devicons" },
 	config = function()
 		local tree = require("nvim-tree")
+		local tree_api = require("nvim-tree.api").tree
 		local keymap = vim.keymap
+		local devicons = require("nvim-web-devicons")
+
+		devicons.setup({
+			override = {
+				astro = {
+					icon = "",
+					color = "#EF8547",
+					name = "astro",
+				},
+			},
+		})
 
 		tree.setup({
 			disable_netrw = true,
@@ -20,6 +32,14 @@ return {
 				root_folder_label = false,
 				highlight_git = true,
 			},
+		})
+
+		vim.api.nvim_create_autocmd("VimEnter", {
+			callback = function()
+				if vim.fn.argc() == 0 then
+					tree_api.open()
+				end
+			end,
 		})
 
 		keymap.set("n", "<leader>ee", "<cmd>NvimTreeFocus<CR>", { desc = "Open file explorer" })
