@@ -53,3 +53,6 @@ run_script "$HOME/.fzf.zsh"
 
 # zellij
 alias zel='zellij --session=$(basename "$PWD") --layout=dev'
+
+# android
+export ANDROID_HOME="$(brew --prefix)/share/android-commandlinetools"
