@@ -27,7 +27,6 @@ return {
 				"tailwindcss",
 				"lua_ls",
 				"eslint",
-				"pyright",
 				"astro",
 			},
 		})
@@ -36,8 +35,6 @@ return {
 			ensure_installed = {
 				"prettierd",
 				"stylua",
-				"shfmt",
-				"black",
 			},
 		})
 	end,

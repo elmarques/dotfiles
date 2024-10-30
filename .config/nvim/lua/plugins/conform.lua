@@ -16,9 +16,6 @@ return {
 				yaml = { "prettierd" },
 				markdown = { "prettierd" },
 				lua = { "stylua" },
-				sh = { "shfmt" },
-				zsh = { "shfmt" },
-				python = { "black" },
 			},
 			format_on_save = {
 				lsp_fallback = true,
