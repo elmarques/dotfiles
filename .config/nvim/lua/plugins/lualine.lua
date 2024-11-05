@@ -10,14 +10,16 @@ return {
 			color = { fg = "#ff9e64" },
 		}
 
-		lualine.setup({
-			options = {
-				theme = "catppuccin",
-				component_separators = "",
-			},
-			sections = {
-				lualine_x = { status_section, "encoding", "fileformat", "filetype" },
-			},
-		})
+		if not vim.g.vscode then
+			lualine.setup({
+				options = {
+					theme = "catppuccin",
+					component_separators = "",
+				},
+				sections = {
+					lualine_x = { status_section, "encoding", "fileformat", "filetype" },
+				},
+			})
+		end
 	end,
 }
