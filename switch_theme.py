@@ -15,6 +15,10 @@ THEME_CHANGES = {
         "workbench.colorTheme": f"Catppuccin {t.capitalize()}",
         "workbench.iconTheme": f"catppuccin-{t}",
     },
+    "Library/Application Support/Cursor/User/settings.json": lambda t: {
+        "workbench.colorTheme": f"Catppuccin {t.capitalize()}",
+        "workbench.iconTheme": f"catppuccin-{t}",
+    },
 }
 
 
