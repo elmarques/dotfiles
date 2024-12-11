@@ -23,7 +23,6 @@ brew "oven-sh/bun/bun"
 cask "1password"
 cask "aerospace"
 cask "affinity-designer"
-cask "android-commandlinetools"
 cask "eqmac"
 cask "font-jetbrains-mono-nerd-font"
 cask "font-ubuntu"
@@ -37,10 +36,6 @@ cask "protonvpn"
 cask "raycast"
 cask "signal"
 cask "spotify"
-cask "temurin"
 cask "todoist"
 cask "wezterm"
-mas "1Password for Safari", id: 1569813296
-mas "AdGuard for Safari", id: 1440147259
-mas "Picasso", id: 6472062986
 mas "Pixelmator Pro", id: 1289583905
