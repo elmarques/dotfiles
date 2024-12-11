@@ -54,8 +54,5 @@ run_script "$HOME/.fzf.zsh"
 # zellij
 alias zel='zellij --session=$(basename "$PWD") --layout=dev'
 
-# android
-export ANDROID_HOME="$(brew --prefix)/share/android-commandlinetools"
-export PATH="$ANDROID_HOME/emulator:$PATH"
-export PATH="$ANDROID_HOME/platform-tools:$PATH"
-export PATH="$ANDROID_HOME/cmdline-tools/latest/bin:$PATH"
+# extra
+run_script "$HOME/.extra"
