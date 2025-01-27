@@ -1,3 +1,5 @@
 .cache/
 .git/
 .npm/
+Library/Application Support/Cursor/*
+!Library/Application Support/Cursor/User/settings.json

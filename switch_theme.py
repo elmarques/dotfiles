@@ -11,10 +11,6 @@ THEME_CHANGES = {
     ".config/zellij/config.kdl": lambda t: f'theme "catppuccin-{t}"',
     ".gitconfig": lambda t: f"features = catppuccin-{t}",
     ".wezterm.lua": lambda t: f'config.color_scheme = "Catppuccin {t.capitalize()}"',
-    "vscode/User/settings.json": lambda t: {
-        "workbench.colorTheme": f"Catppuccin {t.capitalize()}",
-        "workbench.iconTheme": f"catppuccin-{t}",
-    },
     "Library/Application Support/Cursor/User/settings.json": lambda t: {
         "workbench.colorTheme": f"Catppuccin {t.capitalize()}",
         "workbench.iconTheme": f"catppuccin-{t}",
