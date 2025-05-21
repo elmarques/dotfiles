@@ -12,14 +12,14 @@ clear_history() {
 }
 
 # dev
-export EDITOR="nvim"
-export VISUAL="nvim"
+export EDITOR="cursor"
+export VISUAL="cursor"
 
 # homebrew
 eval "$(/opt/homebrew/bin/brew shellenv)"
 
 # asdf
-run_script "$(brew --prefix)/opt/asdf/libexec/asdf.sh"
+export PATH="${ASDF_DATA_DIR:-$HOME/.asdf}/shims:$PATH"
 
 # bun
 export BUN_INSTALL="$HOME/.bun"
@@ -46,13 +46,6 @@ eval "$(zoxide init zsh)"
 
 # eza
 alias l="eza --color=always --icons=always --all --long --no-permissions --no-filesize --no-user --no-time"
-
-# fzf
-eval "$(fzf --zsh)"
-run_script "$HOME/.fzf.zsh"
-
-# zellij
-alias zel='zellij --session=$(basename "$PWD") --layout=dev'
 
 # extra
 run_script "$HOME/.extra"
