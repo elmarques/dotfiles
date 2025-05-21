@@ -19,24 +19,32 @@ alt-shift-j = 'move down'
 alt-shift-k = 'move up'
 alt-shift-l = 'move right'
 
-alt-1 = 'workspace 1'
-alt-2 = 'workspace 2'
-alt-3 = 'workspace 3'
-alt-4 = 'workspace 4'
-alt-5 = 'workspace 5'
-alt-6 = 'workspace 6'
+alt-a = 'workspace 1'
+alt-s = 'workspace 2'
+alt-d = 'workspace 3'
+alt-f = 'workspace 4'
+alt-g = 'workspace 5'
+alt-z = 'workspace 6'
+alt-x = 'workspace 7'
+alt-c = 'workspace 8'
+alt-v = 'workspace 9'
+alt-b = 'workspace 10'
 
-alt-shift-1 = 'move-node-to-workspace 1'
-alt-shift-2 = 'move-node-to-workspace 2'
-alt-shift-3 = 'move-node-to-workspace 3'
-alt-shift-4 = 'move-node-to-workspace 4'
-alt-shift-5 = 'move-node-to-workspace 5'
-alt-shift-6 = 'move-node-to-workspace 6'
+alt-shift-a = 'move-node-to-workspace 1'
+alt-shift-s = 'move-node-to-workspace 2'
+alt-shift-d = 'move-node-to-workspace 3'
+alt-shift-f = 'move-node-to-workspace 4'
+alt-shift-g = 'move-node-to-workspace 5'
+alt-shift-z = 'move-node-to-workspace 6'
+alt-shift-x = 'move-node-to-workspace 7'
+alt-shift-c = 'move-node-to-workspace 8'
+alt-shift-v = 'move-node-to-workspace 9'
+alt-shift-b = 'move-node-to-workspace 10'
 
 alt-tab = 'workspace-back-and-forth'
 
-alt-ctrl-m = 'fullscreen'
-alt-ctrl-r = ['mode service', 'reload-config', 'mode main']
+alt-shift-i = 'fullscreen'
+alt-shift-q = ['mode service', 'reload-config', 'mode main']
 
 alt-shift-semicolon = 'mode service'
 
@@ -51,69 +59,50 @@ alt-shift-j = ['join-with down', 'mode main']
 alt-shift-k = ['join-with up', 'mode main']
 alt-shift-l = ['join-with right', 'mode main']
 
+# Workspace 1
 [[on-window-detected]]
 if.app-id = 'com.todoist.mac.Todoist'
 run = 'move-node-to-workspace 1'
 
-[[on-window-detected]]
-if.app-id = 'com.linear'
-run = 'move-node-to-workspace 1'
-
-[[on-window-detected]]
-if.app-id = 'com.github.wez.wezterm'
-run = 'move-node-to-workspace 2'
-
+# Workspace 2
 [[on-window-detected]]
 if.app-id = 'com.microsoft.VSCode'
 run = 'move-node-to-workspace 2'
 
 [[on-window-detected]]
-if.app-id = 'com.todesktop.230313mzl4w4u92'
+if.app-id = 'com.todesktop.230313mzl4w4u92' # Cursor
 run = 'move-node-to-workspace 2'
 
 [[on-window-detected]]
-if.app-id = 'com.apple.Safari'
-run = 'move-node-to-workspace 3'
+if.app-id = 'dev.zed.Zed'
+run = 'move-node-to-workspace 2'
 
 [[on-window-detected]]
 if.app-id = 'com.brave.Browser'
+run = 'move-node-to-workspace 2'
+
+# Workspace 3
+[[on-window-detected]]
+if.app-id = 'com.apple.Safari'
 run = 'move-node-to-workspace 3'
 
 [[on-window-detected]]
 if.app-id = 'company.thebrowser.Browser'
 run = 'move-node-to-workspace 3'
 
-[[on-window-detected]]
-if.app-id = 'com.spotify.client'
-run = 'move-node-to-workspace 4'
-
-[[on-window-detected]]
-if.app-id = 'com.tidal.desktop'
-run = 'move-node-to-workspace 4'
-
-[[on-window-detected]]
-if.app-id = 'com.apple.Music'
-run = 'move-node-to-workspace 4'
-
-[[on-window-detected]]
-if.app-id = 'com.roon.Roon'
-run = 'move-node-to-workspace 4'
-
-[[on-window-detected]]
-if.app-id = 'ch.protonmail.desktop'
-run = 'move-node-to-workspace 5'
-
+# Workspace 4
 [[on-window-detected]]
 if.app-id = 'com.tinyspeck.slackmacgap'
-run = 'move-node-to-workspace 6'
+run = 'move-node-to-workspace 4'
+
+# Workspace 5
+[[on-window-detected]]
+if.app-id = 'com.spotify.client'
+run = 'move-node-to-workspace 5'
 
 # Safari Web Apps
 # /usr/bin/lsappinfo list | grep -i safari
 
-[[on-window-detected]]
-if.app-id = 'com.apple.Safari.WebApp.56B786A1-5A22-48FB-8AF6-5AB5DA25FA61'
-run = 'move-node-to-workspace 1'
-
-[[on-window-detected]]
-if.app-id = 'com.apple.Safari.WebApp.5E42E39F-844F-4612-B22F-C7C5BF400F4B'
-run = 'move-node-to-workspace 6'
+# [[on-window-detected]]
+# if.app-id = 'com.apple.Safari.WebApp.56B786A1-5A22-48FB-8AF6-5AB5DA25FA61'
+# run = 'move-node-to-workspace 1'
