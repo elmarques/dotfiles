@@ -1,9 +1,9 @@
 {
-  "apc.font.family": "JetBrainsMono Nerd Font",
   "breadcrumbs.enabled": false,
+  "cursor.cpp.disabledLanguages": ["markdown"],
   "editor.defaultFormatter": "esbenp.prettier-vscode",
   "editor.fontFamily": "JetBrainsMono Nerd Font",
-  "editor.fontSize": 15,
+  "editor.fontSize": 14,
   "editor.fontLigatures": true,
   "editor.formatOnSave": true,
   "editor.guides.indentation": false,
@@ -15,11 +15,10 @@
   "files.autoSave": "off",
   "terminal.integrated.fontFamily": "JetBrainsMono Nerd Font",
   "terminal.integrated.fontSize": 14,
-  "terminal.integrated.minimumContrastRatio": 1,
   "window.commandCenter": false,
-  "workbench.colorTheme": "Catppuccin Mocha",
+  "workbench.colorTheme": "Monokai Pro (Filter Spectrum)",
   "workbench.fontAliasing": "antialiased",
-  "workbench.iconTheme": "catppuccin-mocha",
+  "workbench.iconTheme": "Monokai Pro (Filter Spectrum) Icons",
   "workbench.layoutControl.enabled": false,
-  "workbench.sideBar.location": "right"
+  "workbench.sideBar.location": "left"
 }
