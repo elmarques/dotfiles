@@ -1,24 +1,23 @@
 {
   "breadcrumbs.enabled": false,
-  "cursor.cpp.disabledLanguages": ["markdown"],
+
+  "editor.accessibilitySupport": "off",
   "editor.defaultFormatter": "esbenp.prettier-vscode",
   "editor.fontFamily": "JetBrainsMono Nerd Font",
-  "editor.fontSize": 14,
   "editor.fontLigatures": true,
+  "editor.fontSize": 14,
   "editor.formatOnSave": true,
   "editor.guides.indentation": false,
   "editor.lineHeight": 1.8,
   "editor.minimap.enabled": false,
   "editor.rulers": [80],
-  "editor.scrollbar.horizontal": "hidden",
-  "editor.scrollbar.vertical": "hidden",
-  "files.autoSave": "off",
+
+  "terminal.integrated.enablePersistentSessions": false,
   "terminal.integrated.fontFamily": "JetBrainsMono Nerd Font",
   "terminal.integrated.fontSize": 14,
-  "window.commandCenter": false,
-  "workbench.colorTheme": "Monokai Pro (Filter Spectrum)",
+  "terminal.integrated.persistentSessionReviveProcess": "never",
+
+  "workbench.colorTheme": "Ayu Dark Bordered",
   "workbench.fontAliasing": "antialiased",
-  "workbench.iconTheme": "Monokai Pro (Filter Spectrum) Icons",
-  "workbench.layoutControl.enabled": false,
-  "workbench.sideBar.location": "left"
+  "workbench.iconTheme": "Monokai Pro (Filter Spectrum) Icons"
 }
