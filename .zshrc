@@ -26,12 +26,8 @@ export BUN_INSTALL="$HOME/.bun"
 export PATH="$BUN_INSTALL/bin:$PATH"
 run_script "$BUN_INSTALL/_bun"
 
-# claude code
-export PATH="$HOME/.claude/local:$PATH"
-alias claude="$HOME/.claude/local/claude"
-
-# eza
-alias l="eza --color=always --icons=always --all --long --no-permissions --no-filesize --no-user --no-time"
+# fnm
+eval "$(fnm env --use-on-cd)"
 
 # zsh history
 setopt extended_history
@@ -50,6 +46,9 @@ run_script "$(brew --prefix)/share/zsh-syntax-highlighting/zsh-syntax-highlighti
 
 # zoxide
 eval "$(zoxide init zsh)"
+
+# eza
+alias l="eza --color=always --icons=always --all --long --no-permissions --no-filesize --no-user --no-time"
 
 # extra
 run_script "$HOME/.extra"
