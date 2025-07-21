@@ -18,6 +18,7 @@ clear_history() {
 # dev
 export EDITOR="cursor"
 export VISUAL="cursor"
+export XDG_CONFIG_HOME="$HOME/.config"
 
 # homebrew
 eval "$(/opt/homebrew/bin/brew shellenv)"

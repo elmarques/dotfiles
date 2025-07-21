@@ -10,12 +10,10 @@
 	pager = delta
 [interactive]
 	diffFilter = delta --color-only
-[include]
-	path = ~/.config/delta/themes/catppuccin.gitconfig
 [delta]
-	features = catppuccin-mocha
 	navigate = true
 	side-by-side = true
+	syntax-theme = Ayu Dark
 [color]
 	ui = auto
 [color "branch"]
