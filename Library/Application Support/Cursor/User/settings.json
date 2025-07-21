@@ -18,6 +18,5 @@
   "terminal.integrated.persistentSessionReviveProcess": "never",
 
   "workbench.colorTheme": "Ayu Dark Bordered",
-  "workbench.fontAliasing": "antialiased",
-  "workbench.iconTheme": "Monokai Pro (Filter Spectrum) Icons"
+  "workbench.fontAliasing": "antialiased"
 }
