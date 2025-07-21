@@ -42,6 +42,11 @@ setopt hist_ignore_space
 setopt hist_verify
 setopt share_history
 
+# zsh on exit
+zshexit() {
+  clear_history
+}
+
 # starship
 eval "$(starship init zsh)"
 
