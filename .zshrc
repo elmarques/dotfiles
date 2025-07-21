@@ -5,6 +5,10 @@ run_script() {
   [ -s "$1" ] && . "$1"
 }
 
+cmd_exists() {
+  command -v "$1" >/dev/null 2>&1
+}
+
 clear_history() {
   echo -n >|"$HISTFILE"
   fc -p "$HISTFILE"
@@ -27,7 +31,7 @@ export PATH="$BUN_INSTALL/bin:$PATH"
 run_script "$BUN_INSTALL/_bun"
 
 # fnm
-eval "$(fnm env --use-on-cd)"
+cmd_exists fnm && eval "$(fnm env --use-on-cd)"
 
 # zsh history
 setopt extended_history
