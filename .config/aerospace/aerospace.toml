@@ -116,6 +116,10 @@ run = 'move-node-to-workspace 5'
 # --- Workspace 6 ---
 
 [[on-window-detected]]
+if.app-id = 'dev.warp.Warp-Stable'
+run = 'move-node-to-workspace 6'
+
+[[on-window-detected]]
 if.app-id = 'com.mitchellh.ghostty'
 run = 'move-node-to-workspace 6'
 
@@ -127,10 +131,6 @@ run = 'move-node-to-workspace 6'
 
 [[on-window-detected]]
 if.app-id = 'com.readdle.SparkDesktop'
-run = 'move-node-to-workspace 7'
-
-[[on-window-detected]]
-if.app-id = 'com.superhuman.electron'
 run = 'move-node-to-workspace 7'
 
 # --- Workspace 8 ---
