@@ -25,7 +25,9 @@ cask "protonvpn"
 cask "raycast"
 cask "readdle-spark"
 cask "signal"
+cask "slack"
 cask "spotify"
+cask "todoist"
 cask "warp"
 mas "1Password for Safari", id: 1569813296
 mas "Bear", id: 1091189122

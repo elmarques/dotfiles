@@ -73,8 +73,7 @@ alt-shift-l = ['join-with right', 'mode main']
 # --- Workspace 1 ---
 
 [[on-window-detected]]
-# Todoist
-if.app-id = 'com.apple.Safari.WebApp.B0AB4E1D-3792-4628-A649-BCFF53B6990B'
+if.app-id = 'com.todoist.mac.Todoist'
 run = 'move-node-to-workspace 1'
 
 # --- Workspace 2 ---
@@ -93,11 +92,6 @@ if.app-id = 'dev.zed.Zed'
 run = 'move-node-to-workspace 2'
 
 # --- Workspace 3 ---
-
-[[on-window-detected]]
-# Slack
-if.app-id = 'com.apple.Safari.WebApp.74853DA0-3496-49A5-B42C-D4F0344B0D1C'
-run = 'move-node-to-workspace 3'
 
 [[on-window-detected]]
 if.app-id = 'com.tinyspeck.slackmacgap'
