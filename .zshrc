@@ -5,10 +5,6 @@ run_script() {
   [ -s "$1" ] && . "$1"
 }
 
-cmd_exists() {
-  command -v "$1" >/dev/null 2>&1
-}
-
 clear_history() {
   echo -n >|"$HISTFILE"
   fc -p "$HISTFILE"
@@ -23,16 +19,13 @@ export XDG_CONFIG_HOME="$HOME/.config"
 # homebrew
 eval "$(/opt/homebrew/bin/brew shellenv)"
 
-# asdf
-export PATH="${ASDF_DATA_DIR:-$HOME/.asdf}/shims:$PATH"
-
 # bun
 export BUN_INSTALL="$HOME/.bun"
 export PATH="$BUN_INSTALL/bin:$PATH"
 run_script "$BUN_INSTALL/_bun"
 
 # fnm
-cmd_exists fnm && eval "$(fnm env --use-on-cd)"
+eval "$(fnm env --use-on-cd --shell zsh)"
 
 # zsh history
 setopt extended_history
