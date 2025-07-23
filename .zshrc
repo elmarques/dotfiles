@@ -27,6 +27,9 @@ run_script "$BUN_INSTALL/_bun"
 # fnm
 eval "$(fnm env --use-on-cd --shell zsh)"
 
+# uv
+export PATH="$HOME/.local/bin:$PATH"
+
 # zsh history
 setopt extended_history
 setopt hist_expire_dups_first
