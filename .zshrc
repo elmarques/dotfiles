@@ -6,9 +6,8 @@ run_script() {
 }
 
 clear_history() {
-  echo -n >|"$HISTFILE"
-  fc -p "$HISTFILE"
-  echo >&2 "History file deleted."
+  local histfile="${HISTFILE:-$HOME/.zsh_history}"
+  [[ -f "$histfile" ]] && : >| "$histfile" && fc -p "$histfile"
 }
 
 # dev
@@ -29,6 +28,9 @@ eval "$(fnm env --use-on-cd --shell zsh)"
 
 # uv
 export PATH="$HOME/.local/bin:$PATH"
+
+# claude code
+alias cc="claude --dangerously-skip-permissions"
 
 # zsh history
 setopt extended_history
