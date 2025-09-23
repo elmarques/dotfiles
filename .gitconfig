@@ -7,13 +7,6 @@
 	st = status -s
 [core]
 	editor = $EDITOR
-	pager = delta
-[interactive]
-	diffFilter = delta --color-only
-[delta]
-	navigate = true
-	side-by-side = true
-	syntax-theme = Ayu Dark
 [color]
 	ui = auto
 [color "branch"]
