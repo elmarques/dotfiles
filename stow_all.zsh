@@ -38,6 +38,7 @@ ensure_dirs
 stow_cmd -t ~ "${HOME_PKGS[@]}"
 
 for pkg in "${CONFIG_PKGS[@]}"; do
+  [[ -d "config/$pkg" ]] || continue
   stow_cmd -d config -t ~/.config "$pkg"
 done
 
