@@ -72,8 +72,9 @@ alt-shift-l = ['join-with right', 'mode main']
 
 # --- Workspace 1 ---
 
+# Todoist (supports both Electron app and Safari Web App)
 [[on-window-detected]]
-if.app-id = 'com.todoist.mac.Todoist'
+if.app-name-regex-substring = 'Todoist'
 run = 'move-node-to-workspace 1'
 
 # --- Workspace 2 ---
@@ -93,8 +94,9 @@ run = 'move-node-to-workspace 2'
 
 # --- Workspace 3 ---
 
+# Slack (supports both Electron app and Safari Web App)
 [[on-window-detected]]
-if.app-id = 'com.tinyspeck.slackmacgap'
+if.app-name-regex-substring = 'Slack'
 run = 'move-node-to-workspace 3'
 
 # --- Workspace 4 ---
@@ -133,9 +135,15 @@ run = 'move-node-to-workspace 7'
 if.app-id = 'com.spotify.client'
 run = 'move-node-to-workspace 8'
 
-# Safari Web Apps
-# lsappinfo list | grep -i safari
-
-# [[on-window-detected]]
-# if.app-id = 'com.apple.Safari.WebApp.56B786A1-5A22-48FB-8AF6-5AB5DA25FA61'
-# run = 'move-node-to-workspace 1'
+# Safari Web Apps Configuration
+#
+# Safari Web Apps (Add to Dock) have dynamic bundle IDs that change per machine.
+# Solution: Use app-name-regex-substring instead of app-id
+#
+# IMPORTANT: When creating Safari Web Apps, name them consistently across machines:
+#   - Todoist → workspace 1
+#   - Slack → workspace 3
+#
+# Debug commands:
+#   lsappinfo list | grep -i safari
+#   aerospace list-windows --all --format "%{app-name} | %{app-bundle-id}"
