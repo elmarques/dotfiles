@@ -72,7 +72,10 @@ alt-shift-l = ['join-with right', 'mode main']
 
 # --- Workspace 1 ---
 
-# Todoist (supports both Electron app and Safari Web App)
+[[on-window-detected]]
+if.app-name-regex-substring = 'Proton Calendar'
+run = 'move-node-to-workspace 1'
+
 [[on-window-detected]]
 if.app-name-regex-substring = 'Todoist'
 run = 'move-node-to-workspace 1'
