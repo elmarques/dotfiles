@@ -31,6 +31,7 @@ export PATH="$HOME/.local/bin:$PATH"
 
 # claude code
 alias cc="claude --dangerously-skip-permissions"
+export DISABLE_AUTOUPDATER=1
 
 # zsh history
 setopt extended_history
