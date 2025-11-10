@@ -9,7 +9,7 @@ typeset -a CONFIG_PKGS=(
   #1Password
   aerospace
   #bat
-  #ghostty
+  ghostty
   #nvim
   #sketchybar
   #skhd
