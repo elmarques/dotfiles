@@ -16,7 +16,7 @@ typeset -a CONFIG_PKGS=(
   #yabai
   #zellij
 )
-typeset -a EXTRA_PKGS=(cursor)
+typeset -a EXTRA_PKGS=(claude cursor)
 
 dry_run=false
 [[ "${1:-}" == "--dry-run" ]] && dry_run=true
