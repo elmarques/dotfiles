@@ -1,0 +1,26 @@
+# Model & reasoning
+model = "gpt-5.1-codex"
+model_reasoning_effort = "high"
+
+# Sandbox settings
+sandbox_mode = "workspace-write"
+
+[sandbox_workspace_write]
+network_access = true
+
+# Features
+[features]
+web_search_request = true
+
+# MCP Servers
+[mcp_servers.serena]
+command = "uvx"
+args = ["--from", "git+https://github.com/oraios/serena", "serena", "start-mcp-server"]
+
+[mcp_servers.context7]
+command = "npx"
+args = ["-y", "@upstash/context7-mcp"]
+
+[mcp_servers.playwright]
+command = "npx"
+args = ["@playwright/mcp@latest", "--browser=chromium"]

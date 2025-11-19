@@ -33,7 +33,9 @@ export PATH="$HOME/.local/bin:$PATH"
 
 # claude code
 alias cc="claude --dangerously-skip-permissions"
-export DISABLE_AUTOUPDATER=1
+
+# codex
+alias cx="codex -c approval_policy=never -c sandbox_mode=danger-full-access"
 
 # local overrides
 [ -s "$HOME/.extra" ] && . "$HOME/.extra"
