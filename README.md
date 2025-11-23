@@ -56,14 +56,14 @@ Contains shell configs (.zshrc), git config, editor config, Brewfile, and theme 
 Manages XDG-compliant applications. Enable/disable packages by commenting/uncommenting in the `CONFIG_PKGS` array in `stow_all.zsh:8-18`.
 
 Active packages: `aerospace`, `ghostty`
-Available but disabled: `nvim`, `bat`, `sketchybar`, `skhd`, `yabai`, `zellij`
+Available but disabled: `1Password`, `nvim`, `bat`, `sketchybar`, `skhd`, `yabai`, `zellij`
 
-### 3. EXTRA_PKGS (`claude`, `cursor`)
+### 3. EXTRA_PKGS (`claude`, `codex`, `cursor`, `gemini`, `vscode`)
 
 **Target:** `~` (home directory)
 **Pattern:** `$pkg/path/to/file` → `~/path/to/file`
 
-For applications with non-standard config locations (e.g., `~/.claude/settings.json`, `~/Library/Application Support/Cursor/User/`).
+For applications with non-standard config locations (e.g., `~/.claude/settings.json`, `~/Library/Application Support/Code/User/`).
 
 ## Git Commit Conventions
 

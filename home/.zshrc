@@ -37,5 +37,8 @@ alias cc="claude --dangerously-skip-permissions"
 # codex
 alias cx="codex -c approval_policy=never -c sandbox_mode=danger-full-access"
 
+# gemini
+alias gm="gemini --yolo --model gemini-3-pro-preview"
+
 # local overrides
 [ -s "$HOME/.extra" ] && . "$HOME/.extra"
