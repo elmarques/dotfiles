@@ -16,7 +16,7 @@ typeset -a CONFIG_PKGS=(
   #yabai
   #zellij
 )
-typeset -a EXTRA_PKGS=(claude codex gemini vscode)
+typeset -a EXTRA_PKGS=(claude vscode)
 
 dry_run=false
 [[ "${1:-}" == "--dry-run" ]] && dry_run=true
