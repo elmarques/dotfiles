@@ -31,6 +31,9 @@ eval "$(fnm env --use-on-cd --shell zsh)"
 # uv
 export PATH="$HOME/.local/bin:$PATH"
 
+# bun
+export PATH="$HOME/.bun/bin:$PATH"
+
 # claude code
 alias cc="claude --dangerously-skip-permissions"
 
