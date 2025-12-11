@@ -11,6 +11,7 @@ typeset -a CONFIG_PKGS=(
   #bat
   ghostty
   #nvim
+  opencode
   #sketchybar
   #skhd
   #yabai
