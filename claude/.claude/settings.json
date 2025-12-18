@@ -1,5 +1,4 @@
 {
   "cleanupPeriodDays": 14,
-  "includeCoAuthoredBy": false,
-  "alwaysThinkingEnabled": true
+  "includeCoAuthoredBy": false
 }
