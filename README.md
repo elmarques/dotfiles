@@ -44,7 +44,7 @@ The repository uses three package categories, each with a specific purpose:
 **Target:** `~` (home directory)
 **Pattern:** `home/file` → `~/file`
 
-Contains shell configs (.zshrc), git config, editor config, Brewfile, and theme utilities.
+Contains shell configs (.zshrc) and git config.
 
 ### 2. CONFIG_PKGS (`config/`)
 
@@ -53,12 +53,9 @@ Contains shell configs (.zshrc), git config, editor config, Brewfile, and theme 
 
 **Important:** Double-nesting is required for Stow to create correct symlinks.
 
-Manages XDG-compliant applications. Enable/disable packages by commenting/uncommenting in the `CONFIG_PKGS` array in `stow_all.zsh:8-18`.
+Manages XDG-compliant applications. Enable/disable packages by commenting/uncommenting in the `CONFIG_PKGS` array in `stow_all.zsh`.
 
-Active packages: `aerospace`, `ghostty`
-Available but disabled: `1Password`, `nvim`, `bat`, `sketchybar`, `skhd`, `yabai`, `zellij`
-
-### 3. EXTRA_PKGS (`claude`, `codex`, `cursor`, `gemini`, `vscode`)
+### 3. EXTRA_PKGS (root directories)
 
 **Target:** `~` (home directory)
 **Pattern:** `$pkg/path/to/file` → `~/path/to/file`
