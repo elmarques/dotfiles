@@ -11,13 +11,12 @@ typeset -a CONFIG_PKGS=(
   #bat
   ghostty
   #nvim
-  opencode
   #sketchybar
   #skhd
   #yabai
   #zellij
 )
-typeset -a EXTRA_PKGS=(claude factory vscode)
+typeset -a EXTRA_PKGS=(claude vscode)
 
 dry_run=false
 [[ "${1:-}" == "--dry-run" ]] && dry_run=true
