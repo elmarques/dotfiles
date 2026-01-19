@@ -1,4 +1,7 @@
 {
   "cleanupPeriodDays": 14,
-  "includeCoAuthoredBy": false
+  "includeCoAuthoredBy": false,
+  "enabledPlugins": {
+    "airflow@elmarques-marketplace": true
+  }
 }
