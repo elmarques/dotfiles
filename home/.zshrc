@@ -44,5 +44,8 @@ alias cx="codex -c approval_policy=never -c sandbox_mode=danger-full-access"
 # gemini
 alias gm="gemini --yolo --model gemini-3-pro-preview"
 
+# agent-browser
+export AGENT_BROWSER_EXECUTABLE_PATH="/Applications/Helium.app/Contents/MacOS/Helium"
+
 # local overrides
 [ -s "$HOME/.extra" ] && . "$HOME/.extra"
