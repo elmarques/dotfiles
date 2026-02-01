@@ -34,9 +34,12 @@ export PATH="$HOME/.local/bin:$PATH"
 # bun
 export PATH="$HOME/.bun/bin:$PATH"
 
+# pnpm
+export PNPM_HOME="$HOME/Library/pnpm"
+export PATH="$PNPM_HOME:$PATH"
+
 # claude code
 alias cc="claude --dangerously-skip-permissions"
-alias ccaf="cc --plugin-dir $HOME/dev/elmarques/claude-marketplace/plugins/airflow"
 
 # codex
 alias cx="codex -c approval_policy=never -c sandbox_mode=danger-full-access"
