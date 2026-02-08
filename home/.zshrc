@@ -25,18 +25,11 @@ eval "$(zoxide init zsh)"
 # eza
 alias l="eza --color=always --icons=always --all --long --no-permissions --no-filesize --no-user --no-time"
 
-# fnm
-eval "$(fnm env --use-on-cd --shell zsh)"
-
 # uv
 export PATH="$HOME/.local/bin:$PATH"
 
 # bun
 export PATH="$HOME/.bun/bin:$PATH"
-
-# pnpm
-export PNPM_HOME="$HOME/Library/pnpm"
-export PATH="$PNPM_HOME:$PATH"
 
 # claude code
 alias cc="claude --dangerously-skip-permissions"
