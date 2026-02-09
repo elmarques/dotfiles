@@ -36,7 +36,7 @@ stow_cmd() {
   local args=("$@")
   $dry_run && args=(-n "${args[@]}")
   print -- "+ stow ${args[*]}"
-  stow "${args[@]}"
+  stow --no-folding "${args[@]}"
 }
 
 # ── Stow ────────────────────────────────────────────────────────────
