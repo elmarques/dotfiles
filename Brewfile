@@ -1,4 +1,3 @@
-tap "nikitabobko/tap"
 tap "oven-sh/bun"
 brew "agent-browser"
 brew "biome"
@@ -14,19 +13,7 @@ brew "zoxide"
 brew "zsh-autosuggestions"
 brew "zsh-syntax-highlighting"
 brew "oven-sh/bun/bun"
-cask "nikitabobko/tap/aerospace"
+cask "1password-cli"
 cask "claude-code"
-cask "cleanshot"
-cask "font-jetbrains-mono-nerd-font"
-cask "ghostty"
 cask "helium-browser"
-cask "orbstack"
-cask "protonvpn"
-cask "raycast"
-cask "signal"
-cask "spotify"
-cask "visual-studio-code"
-mas "1Password for Safari", id: 1569813296
-mas "Final Cut Pro", id: 424389933
-mas "Logic Pro", id: 634148309
-mas "Proton Pass for Safari", id: 6502835663
+cask "tailscale"

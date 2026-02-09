@@ -1,0 +1,15 @@
+tap "nikitabobko/tap"
+cask "nikitabobko/tap/aerospace"
+cask "cleanshot"
+cask "font-jetbrains-mono-nerd-font"
+cask "ghostty"
+cask "orbstack"
+cask "protonvpn"
+cask "raycast"
+cask "signal"
+cask "spotify"
+cask "visual-studio-code"
+mas "1Password for Safari", id: 1569813296
+mas "Final Cut Pro", id: 424389933
+mas "Logic Pro", id: 634148309
+mas "Proton Pass for Safari", id: 6502835663

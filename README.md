@@ -1,104 +1,60 @@
 # dotfiles
 
-> This file also serves as guidance for AI coding agents (Claude Code, Codex, etc.) when working in this repository.
+GNU Stow-based dotfiles for macOS. Modular packages → symlinked to target locations. Per-machine package sets.
 
-## Overview
-
-This is a GNU Stow-based dotfiles management system for macOS. Configurations are organized into modular packages that are symlinked to their target locations using Stow.
-
-## Essential Commands
-
-### Deploy All Configurations
+## Commands
 
 ```bash
-./stow_all.zsh           # Deploy all enabled packages
-./stow_all.zsh --dry-run # Preview what would be deployed
+./stow_all.zsh <machine>              # Deploy packages for a machine
+./stow_all.zsh <machine> --dry-run    # Preview only
+
+brew bundle --file=Brewfile            # Base Homebrew packages (all machines)
+brew bundle --file=Brewfile.<machine>  # Machine-specific Homebrew packages
+
+stow -t ~ home                         # Stow single package
+stow -d config -t ~/.config ghostty    # Stow config package
+stow -D -t ~ home                      # Unstow (remove symlinks)
 ```
 
-### Deploy Individual Packages
+## Package Categories
 
-```bash
-# Home directory package
-stow -t ~ home
+### HOME_PKGS (`home/`)
 
-# Config directory package
-stow -d config -t ~/.config ghostty
+`home/file` → `~/file` — Shell (.zshrc) and git config. All machines.
 
-# Extra package
-stow -t ~ claude
-```
+### CONFIG_PKGS (`config/`)
 
-### Unstow (Remove Symlinks)
+`config/$pkg/$pkg/file` → `~/.config/$pkg/file` — XDG-compliant apps.
 
-```bash
-stow -D -t ~ home
-stow -D -d config -t ~/.config ghostty
-```
+IMPORTANT: Double-nesting required for correct symlinks.
 
-## Architecture
+### EXTRA_PKGS (root dirs)
 
-The repository uses three package categories, each with a specific purpose:
+`$pkg/path/to/file` → `~/path/to/file` — Non-standard locations (`~/.claude/`, `~/Library/Application Support/`).
 
-### 1. HOME_PKGS (`home/`)
+## Package Distribution
 
-**Target:** `~` (home directory)
-**Pattern:** `home/file` → `~/file`
+Base packages → all machines. Machine-specific → `case` block in `stow_all.zsh`. Check the script for current distribution.
 
-Contains shell configs (.zshrc) and git config.
+## Adding Packages
 
-### 2. CONFIG_PKGS (`config/`)
+**~/.config app** → Create `config/$app/$app/` + add to `CONFIG_PKGS` in `stow_all.zsh`
 
-**Target:** `~/.config`
-**Pattern:** `config/$pkg/$pkg/file` → `~/.config/$pkg/file`
+**Home directory file** → Add to `home/`
 
-**Important:** Double-nesting is required for Stow to create correct symlinks.
+**Non-standard location** → Create `$app/` at repo root mirroring target path + add to `EXTRA_PKGS` in `stow_all.zsh`
 
-Manages XDG-compliant applications. Enable/disable packages by commenting/uncommenting in the `CONFIG_PKGS` array in `stow_all.zsh`.
+**New machine** → Add `case` block in `stow_all.zsh` + create `Brewfile.<machine>`
 
-### 3. EXTRA_PKGS (root directories)
+## Commit Conventions
 
-**Target:** `~` (home directory)
-**Pattern:** `$pkg/path/to/file` → `~/path/to/file`
-
-For applications with non-standard config locations (e.g., `~/.claude/settings.json`, `~/Library/Application Support/Code/User/`).
-
-## Git Commit Conventions
-
-Use category prefixes in commit messages:
-
-- `(terminal)` - Terminal emulator configs
-- `(zsh)` - Shell configuration
-- `(window)` - Window manager (Aerospace)
-- `(brew)` - Homebrew packages
-- `(dev)` - Development tools
-- `(ai)` - AI coding agents (Claude Code, Cursor, etc.)
+Category prefixes: `(terminal)` | `(zsh)` | `(window)` | `(brew)` | `(dev)` | `(ai)`
 
 Example: `(terminal) replace Warp by Ghostty`
 
-## Adding New Configurations
+## Notes
 
-### For ~/.config Applications
-
-1. Create `config/$app/$app/` directory (double-nesting required)
-2. Place config files inside
-3. Add `$app` to `CONFIG_PKGS` array in `stow_all.zsh`
-4. Run `./stow_all.zsh`
-
-### For Home Directory Files
-
-1. Add file to `home/`
-2. Run `./stow_all.zsh`
-
-### For Non-Standard Locations
-
-1. Create `$app/` directory at repo root
-2. Mirror the full target path structure inside (e.g., `claude/.claude/settings.json`)
-3. Add `$app` to `EXTRA_PKGS` array in `stow_all.zsh`
-4. Run `./stow_all.zsh`
-
-## Important Notes
-
-- **Never commit secrets.** Use `.extra` for local-only zsh overrides (sourced by `.zshrc` but not tracked).
-- **Test with --dry-run** before deploying changes to avoid breaking existing symlinks.
-- **Stow ignore files** (`.stow-local-ignore`) prevent `.DS_Store` and other unwanted files from being symlinked.
-- The script skips missing package directories, so commented packages in arrays don't cause errors.
+- Never commit secrets → use `.extra` for local-only zsh overrides (sourced by `.zshrc`, not tracked)
+- Always `--dry-run` before deploying
+- `.stow-local-ignore` prevents `.DS_Store` and similar from being symlinked
+- Missing package directories are skipped gracefully

@@ -4,28 +4,33 @@ set -euo pipefail
 
 cd "${0:A:h}"
 
+# ── Packages ────────────────────────────────────────────────────────
+
 typeset -a HOME_PKGS=(home)
-typeset -a CONFIG_PKGS=(
-  #1Password
-  aerospace
-  #bat
-  ghostty
-  #nvim
-  opencode
-  #sketchybar
-  #skhd
-  #yabai
-  #zellij
-)
-typeset -a EXTRA_PKGS=(claude codex vscode)
+
+typeset -a CONFIG_PKGS=()
+typeset -a EXTRA_PKGS=(claude)
+typeset -a ENSURE_DIRS=("$HOME/.config")
+
+case "${1:-}" in
+  ada)
+    CONFIG_PKGS+=(aerospace ghostty opencode)
+    EXTRA_PKGS+=(codex vscode)
+    ENSURE_DIRS+=("$HOME/Library/Application Support/Code/User")
+    ;;
+  minnie)
+    ;;
+  *)
+    print "Usage: ${0:t} <machine> [--dry-run]"
+    print "Machines: ada, minnie"
+    exit 1
+    ;;
+esac
 
 dry_run=false
-[[ "${1:-}" == "--dry-run" ]] && dry_run=true
+[[ "${2:-}" == "--dry-run" ]] && dry_run=true
 
-ensure_dirs() {
-  mkdir -p "$HOME/.config"
-  mkdir -p "$HOME/Library/Application Support/Code/User"
-}
+# ── Helpers ─────────────────────────────────────────────────────────
 
 stow_cmd() {
   local args=("$@")
@@ -34,7 +39,9 @@ stow_cmd() {
   stow "${args[@]}"
 }
 
-ensure_dirs
+# ── Stow ────────────────────────────────────────────────────────────
+
+for dir in "${ENSURE_DIRS[@]}"; do mkdir -p "$dir"; done
 
 stow_cmd -t ~ "${HOME_PKGS[@]}"
 
@@ -44,17 +51,10 @@ for pkg in "${CONFIG_PKGS[@]}"; do
 done
 
 for pkg in "${EXTRA_PKGS[@]}"; do
-  # Force overwrite: unstow, remove non-symlink conflicts, then stow
   stow -D -t ~ "$pkg" 2>/dev/null || true
-
-  # Remove any regular files that would conflict (not symlinks)
   find "$pkg" -type f -not -name ".stow-local-ignore" | while read -r file; do
-    # Convert package path to target path (remove package prefix)
     target="$HOME/${file#$pkg/}"
-    if [[ -f "$target" && ! -L "$target" ]]; then
-      rm "$target"
-    fi
+    [[ -f "$target" && ! -L "$target" ]] && rm "$target"
   done
-
   stow_cmd -t ~ "$pkg"
 done
