@@ -1,4 +1,5 @@
 #!/bin/zsh
+typeset -U PATH
 
 # environment
 export EDITOR="code"
@@ -10,7 +11,9 @@ if [[ -d /opt/homebrew ]]; then
 fi
 
 # zsh
-export HISTFILE=/dev/null
+HISTSIZE=5000
+SAVEHIST=0
+unset HISTFILE
 for plugin in zsh-autosuggestions zsh-syntax-highlighting; do
   plugin_file="${HOMEBREW_PREFIX:-/opt/homebrew}/share/$plugin/$plugin.zsh"
   [ -s "$plugin_file" ] && . "$plugin_file"
