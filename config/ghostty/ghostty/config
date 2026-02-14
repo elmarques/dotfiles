@@ -1,4 +1,4 @@
 background-opacity = 1
 keybind = shift+enter=text:\x1b\r
-theme = Ayu
+theme = Tomorrow Night Bright
 window-padding-x = 16
