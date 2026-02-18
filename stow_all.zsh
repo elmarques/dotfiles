@@ -9,13 +9,13 @@ cd "${0:A:h}"
 typeset -a HOME_PKGS=(home)
 
 typeset -a CONFIG_PKGS=()
-typeset -a EXTRA_PKGS=(claude)
+typeset -a EXTRA_PKGS=(codex claude)
 typeset -a ENSURE_DIRS=("$HOME/.config")
 
 case "${1:-}" in
   ada)
     CONFIG_PKGS+=(aerospace ghostty opencode)
-    EXTRA_PKGS+=(codex vscode)
+    EXTRA_PKGS+=(vscode)
     ENSURE_DIRS+=("$HOME/Library/Application Support/Code/User")
     ;;
   minnie)
