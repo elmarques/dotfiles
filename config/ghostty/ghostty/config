@@ -1,4 +1,11 @@
 background-opacity = 1
 keybind = shift+enter=text:\x1b\r
-theme = Tomorrow Night Bright
+theme = Ayu
 window-padding-x = 16
+
+# Font
+font-family = Berkeley Mono
+font-size = 14
+adjust-cell-height = 8%
+font-feature = -calt,-liga,-dlig
+font-synthetic-style = no-bold,no-italic
