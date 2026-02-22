@@ -8,6 +8,6 @@
     "type": "command",
     "command": "~/.claude/statusline-command.sh"
   },
-  "skipDangerousModePermissionPrompt": true,
-  "enabledPlugins": {}
+  "enabledPlugins": {},
+  "skipDangerousModePermissionPrompt": true
 }
