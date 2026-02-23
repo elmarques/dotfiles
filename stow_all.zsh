@@ -9,7 +9,7 @@ cd "${0:A:h}"
 typeset -a HOME_PKGS=(home)
 
 typeset -a CONFIG_PKGS=()
-typeset -a EXTRA_PKGS=(codex claude)
+typeset -a EXTRA_PKGS=(codex claude gemini)
 typeset -a ENSURE_DIRS=("$HOME/.config")
 
 case "${1:-}" in
