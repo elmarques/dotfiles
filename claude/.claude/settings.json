@@ -9,5 +9,29 @@
     "command": "~/.claude/statusline-command.sh"
   },
   "enabledPlugins": {},
-  "skipDangerousModePermissionPrompt": true
+  "skipDangerousModePermissionPrompt": true,
+  "hooks": {
+    "SessionStart": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "bash ~/dev/claudinho-bot/core/skills/skill-memory/scripts/recall-hook.sh",
+            "timeout": 15
+          }
+        ]
+      }
+    ],
+    "SessionEnd": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "bash ~/dev/claudinho-bot/core/skills/skill-memory/scripts/hook.sh",
+            "timeout": 120
+          }
+        ]
+      }
+    ]
+  }
 }
