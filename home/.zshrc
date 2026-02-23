@@ -1,14 +1,7 @@
 #!/bin/zsh
-typeset -U PATH
 
 # environment
 export EDITOR="code"
-
-# homebrew
-if [[ -d /opt/homebrew ]]; then
-  export HOMEBREW_PREFIX="/opt/homebrew"
-  export PATH="$HOMEBREW_PREFIX/bin:$HOMEBREW_PREFIX/sbin:$PATH"
-fi
 
 # zsh
 HISTSIZE=5000
@@ -27,12 +20,6 @@ eval "$(zoxide init zsh)"
 
 # eza
 alias l="eza --color=always --icons=always --all --long --no-permissions --no-filesize --no-user --no-time"
-
-# uv
-export PATH="$HOME/.local/bin:$PATH"
-
-# bun
-export PATH="$HOME/.bun/bin:$PATH"
 
 # claude code
 alias cc="claude --dangerously-skip-permissions"
