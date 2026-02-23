@@ -14,7 +14,7 @@ typeset -a ENSURE_DIRS=("$HOME/.config")
 
 case "${1:-}" in
   ada)
-    CONFIG_PKGS+=(aerospace ghostty opencode)
+    CONFIG_PKGS+=(aerospace ghostty)
     EXTRA_PKGS+=(vscode)
     ENSURE_DIRS+=("$HOME/Library/Application Support/Code/User")
     ;;
