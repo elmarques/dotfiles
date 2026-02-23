@@ -15,10 +15,5 @@
       "hideContextPercentage": false
     },
     "showModelInfoInChat": true
-  },
-  "tools": {
-    "shell": {
-      "showColor": true
-    }
   }
 }
