@@ -1,4 +1,7 @@
 {
+  "context": {
+    "includeDirectories": ["~/Drive/Claudinho"]
+  },
   "general": {
     "sessionRetention": {
       "enabled": true,
