@@ -73,7 +73,7 @@ alt-shift-l = ['join-with right', 'mode main']
 # --- Workspace 1 ---
 
 [[on-window-detected]]
-if.app-name-regex-substring = 'Proton Calendar'
+if.app-name-regex-substring = 'Calendar'
 run = 'move-node-to-workspace 1'
 
 [[on-window-detected]]
