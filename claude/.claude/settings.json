@@ -44,5 +44,6 @@
     "command": "~/.claude/statusline-command.sh"
   },
   "enabledPlugins": {},
-  "skipDangerousModePermissionPrompt": true
+  "skipDangerousModePermissionPrompt": true,
+  "effortLevel": "high"
 }

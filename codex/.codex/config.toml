@@ -3,3 +3,6 @@ model_reasoning_effort = "xhigh"
 model_reasoning_summary = "concise"
 personality = "friendly"
 web_search = "live"
+
+[features]
+multi_agent = true
