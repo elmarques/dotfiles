@@ -3,7 +3,6 @@ model_reasoning_effort = "high"
 model_reasoning_summary = "none"
 personality = "friendly"
 web_search = "live"
-service_tier = "fast"
 
 [features]
 multi_agent = true
