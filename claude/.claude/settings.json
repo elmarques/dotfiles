@@ -1,5 +1,4 @@
 {
-  "autoMemoryEnabled": false,
   "cleanupPeriodDays": 14,
   "env": {
     "CLAUDE_CODE_EXPERIMENTAL_AGENT_TEAMS": "1"
@@ -49,7 +48,10 @@
     "type": "command",
     "command": "~/.claude/statusline-command.sh"
   },
-  "enabledPlugins": {},
-  "skipDangerousModePermissionPrompt": true,
-  "effortLevel": "high"
+  "enabledPlugins": {
+    "telegram@claude-plugins-official": true
+  },
+  "effortLevel": "high",
+  "autoMemoryEnabled": false,
+  "skipDangerousModePermissionPrompt": true
 }
