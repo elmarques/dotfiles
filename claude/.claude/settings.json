@@ -11,13 +11,13 @@
         "hooks": [
           {
             "type": "command",
-            "command": "bash ~/dev/claudinho-bot/core/skills/skill-memory/scripts/recall-hook.sh",
-            "timeout": 15
+            "command": "bun ~/dev/claudinho-bot/core/hooks/boot.ts",
+            "timeout": 30
           },
           {
             "type": "command",
-            "command": "bun ~/dev/claudinho-bot/core/hooks/boot.ts",
-            "timeout": 30
+            "command": "bun ~/dev/claudinho-bot/core/hooks/memory-recall.ts",
+            "timeout": 15
           }
         ]
       }
@@ -27,7 +27,7 @@
         "hooks": [
           {
             "type": "command",
-            "command": "bash ~/dev/claudinho-bot/core/skills/skill-memory/scripts/hook.sh",
+            "command": "bun ~/dev/claudinho-bot/core/hooks/memory-extract.ts",
             "timeout": 120
           }
         ]
