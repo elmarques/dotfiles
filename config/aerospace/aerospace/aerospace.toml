@@ -142,6 +142,10 @@ run = 'move-node-to-workspace 7'
 if.app-id = 'com.spotify.client'
 run = 'move-node-to-workspace 8'
 
+[[on-window-detected]]
+if.app-id = 'com.apple.Music'
+run = 'move-node-to-workspace 8'
+
 # Safari Web Apps Configuration
 #
 # Safari Web Apps (Add to Dock) have dynamic bundle IDs that change per machine.
